@@ -20,6 +20,29 @@ header {
 }
 
 h1 {
+    /* display: flex;
+    justify-content: left;
+    text-align: left;
+    padding: 20px;
+    font-weight: 500; */
+}
+
+footer {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */ */
+    /* height: 40px; */
+    border-top: 10px double var(--primary);
+    
+}
+
+/* Class Selectors */
+___ {
+    border-bottom: 10px double var(--primary);
+}
+
+.title-container {
+    /* justify-content: left; */
     display: flex;
     justify-content: left;
     text-align: left;
@@ -27,19 +50,15 @@ h1 {
     font-weight: 500;
 }
 
-footer {
+.header-buttons-container {
     display: flex;
-
-    
+    justify-content: right;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    position: relative;
+    right: 10px;
 }
-
-/* Class Selectors */
-
-
-.______ {
-    border-bottom: 10px double var(--primary);
-}
-
 
 .copyright-footer {
     font-size: 16px;
@@ -48,3 +67,15 @@ footer {
 
 }
 
+/* ID Selectors */
+
+#back-button {
+    width: 80px;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+#span {
+    font-size: 20px;
+    font-weight: 800;
+}

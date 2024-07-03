@@ -27,19 +27,16 @@ h1 {
     font-size: 60px;
     font-weight:700;
     color: var(--secondary);
-    text-shadow: 1px 1px 2px var(--primary), 0 0 25px blue, 0 0 5px darkblue;
+    text-shadow: 1px 1px 2px var(--primary), 0 0 32px rgb(0, 0, 226), 0 0 8px rgb(0, 0, 116);
     /* 2px 2px 4px var(--primary); */
     text-align: center;   
-}
-
-h2 {
-
 }
 
 h3 {
     text-align: center;
     font-size: 16px;
     margin-top: 15px;
+    padding-bottom: 15px;
     font-weight: normal;
 }
 
@@ -68,8 +65,8 @@ footer {
 }
 
 .container-left, .container-right {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     display: flex;
     flex: 1 0 50%;
     align-items: center;
@@ -77,16 +74,23 @@ footer {
 }
 
 .title-circle {
-    width: 500px;
-    height: 500px;
-    line-height: 500px;
+    width: 450px;
+    height: 450px;
+    line-height: 450px;
     border-radius: 50%;
-    /* font-size: 60px;
-    font-weight:500;
-    color: var(--secondary);
-    text-align: center;
-    text-shadow: 2px, 2px, 4px #000000; */
     background-color: orange; /* For browsers that don't support gradients */
     background-image: repeating-radial-gradient(circle, var(--circle1), var(--circle2)12%, var(--circle3) 25%, var(--circle2) 38%, var(--circle1) 50%);
 }
 
+/* media query moving the form below the title circle for smaller screens */
+@media screen and (max-width: 992px) {
+    .container {
+        flex-direction: column;
+
+    }
+
+    .container-left {
+        border-right: none;
+        border-bottom: 10px double var(--primary);
+    }
+}
