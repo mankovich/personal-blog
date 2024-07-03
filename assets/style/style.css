@@ -1,0 +1,92 @@
+/* Universal Selector */
+* {
+    --primary: black;
+    --secondary: white;
+    --circle1: rgb(206, 126, 69);
+    --circle2: rgb(221, 162, 51);
+    --circle3: rgb(240, 240, 114);
+}
+
+/* Element Selectors */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+header {
+    border-bottom: 10px double var(--primary);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 75px;  
+}
+
+h1 {
+    font-size: 60px;
+    font-weight:700;
+    color: var(--secondary);
+    text-shadow: 1px 1px 2px var(--primary), 0 0 25px blue, 0 0 5px darkblue;
+    /* 2px 2px 4px var(--primary); */
+    text-align: center;   
+}
+
+h2 {
+
+}
+
+h3 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+footer {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* height: 40px; */
+    border-top: 10px double var(--primary);
+}
+
+
+/* Class Selectors */
+.light-button {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+
+.container {
+    display: flex;
+}
+
+.container-left {
+    border-right: 10px double var(--primary);
+}
+
+.container-left, .container-right {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex: 1 0 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-circle {
+    width: 500px;
+    height: 500px;
+    line-height: 500px;
+    border-radius: 50%;
+    /* font-size: 60px;
+    font-weight:500;
+    color: var(--secondary);
+    text-align: center;
+    text-shadow: 2px, 2px, 4px #000000; */
+    background-color: orange; /* For browsers that don't support gradients */
+    background-image: repeating-radial-gradient(circle, var(--circle1), var(--circle2)12%, var(--circle3) 25%, var(--circle2) 38%, var(--circle1) 50%);
+}
+
