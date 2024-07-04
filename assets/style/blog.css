@@ -2,6 +2,7 @@
 * {
     --primary: black;
     --secondary: white;
+    --tertiary: white;
 }
 
 /* Element Selectors */
@@ -26,7 +27,9 @@ h1 {
     font-size: 165%; 
 }
 
-
+main {
+    background-color: var(--tertiary);
+}
 
 footer {
     color: var(--primary); 
@@ -49,7 +52,6 @@ footer li {
     font-weight: bold;
     margin-bottom: 10px;
     padding-left: 30px;
-
 }
 
 /* Class Selectors */
@@ -83,13 +85,13 @@ footer li {
     
 }
 
+
 .portfolio-link,
 .item-text {
     color: var(--primary);
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
-    font: itali
 }
 
 /* ID Selectors */
@@ -98,3 +100,31 @@ footer li {
     font-size: 18px;
     font-weight: 1,000;
 }
+
+#footer-portfolio::after {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 400;
+    content: "Click to check out my portfolio!";
+    text-decoration: italic, underline;
+    /* content: <a href="https://mankovich.github.io/portfolio">Check it out!</a> */
+    /* TODO: setAttribute with JavaScript */
+}
+
+#footer-blog::after {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 400;
+    content: "Full-Stack Blog";
+    text-decoration: italic;
+}
+
+#footer-email:: {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 400;
+    content: "Full-Stack Blog";
+    text-decoration: italic;
+}
+
+
