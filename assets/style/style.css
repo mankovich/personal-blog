@@ -60,11 +60,11 @@ footer {
     display: flex;
 }
 
-.container-left {
+.title-div {
     border-right: 10px double var(--primary);
 }
 
-.container-left, .container-right {
+.title-div, .form-div {
     padding-top: 25px;
     padding-bottom: 25px;
     display: flex;
@@ -89,7 +89,7 @@ footer {
 
     }
 
-    .container-left {
+    .title-div {
         border-right: none;
         border-bottom: 10px double var(--primary);
     }

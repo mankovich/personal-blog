@@ -13,46 +13,51 @@ body {
 }
 
 header {
-    border-bottom: 10px double var(--primary);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 75px;  
+    /* border-bottom: 10px double var(--primary); */
 }
 
 h1 {
-    /* display: flex;
-    justify-content: left;
-    text-align: left;
     padding: 20px;
-    font-weight: 500; */
+    font-weight: 625;
+    font-size: 165%; 
 }
 
+
+
 footer {
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */ */
-    /* height: 40px; */
-    border-top: 10px double var(--primary);
-    
+    color: var(--primary); 
+    background-color: vaR(--secondary);
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer ul {
+    padding-bottom: 15px;
+}
+
+footer li {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 30px;
+
 }
 
 /* Class Selectors */
-___ {
-    border-bottom: 10px double var(--primary);
-}
 
-.title-container {
-    /* justify-content: left; */
+.header-buttons-div {
     display: flex;
-    justify-content: left;
-    text-align: left;
-    padding: 20px;
-    font-weight: 500;
-}
-
-.header-buttons-container {
-    display: flex;
-    justify-content: right;
+    position: relative;
+    right: 20px;
     padding: 10px;
     margin-right: 10px;
     margin-bottom: -5px;
@@ -60,22 +65,36 @@ ___ {
     right: 10px;
 }
 
-.copyright-footer {
-    font-size: 16px;
-    text-align: center;
-
-
-}
-
-/* ID Selectors */
-
-#back-button {
+.back-button {
     width: 80px;
+    padding-bottom: 3px;
+    margin-right: 25px;
     color: var(--secondary);
     background-color: var(--primary);
 }
 
-#span {
-    font-size: 20px;
-    font-weight: 800;
+.posts-container {
+    min-height: 500px;
+    border-top: 10px double var(--primary);
+    border-bottom: 10px double var(--primary);
+}
+
+.footer-copyright {
+    
+}
+
+.portfolio-link,
+.item-text {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    font: itali
+}
+
+/* ID Selectors */
+
+#back-arrow {
+    font-size: 18px;
+    font-weight: 1,000;
 }
