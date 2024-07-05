@@ -8,10 +8,7 @@ const container = document.querySelector('.container');
 const themeSwitch = document.querySelector('#theme-switch');
 const backButton = document.querySelector('#back-button');
 
-// if (themeSwitch) {
-//     initTheme();
 
-// }
 
 
 let mode = 'light';
@@ -32,3 +29,4 @@ themeSwitch.addEventListener('click', function() {
 backButton.addEventListener('click', function() {
     location.assign("index.html");
 })
+

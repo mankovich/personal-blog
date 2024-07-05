@@ -17,21 +17,29 @@ function displayMessage(message) {
 submitButton.addEventListener('click', function(event) {
     event.preventDefault();
     
-    const username = usernameInput.value;
-    const email = emailInput.value;
-    const blogContent = blogContentInput.value;
+    // const username = usernameInput.value;
+    // const email = emailInput.value;
+    // const blogContent = blogContentInput.value;
     
-    if (username === "") {
+    if (usernameInput === "") {
         displayMessage('**Username cannot be blank**');
-    } else if (email === "") {
+    } else if (emailInput === "") {
         displayMessage('**Email cannot be blank**');
-    } else if (blogContent === "") {
+    } else if (blogContentInput === "") {
         displayMessage('**Content cannot be blank**');
     } else {
-        localStorage.setItem('username', username);
-        localStorage.setItem('email', email);
-        localStorage.setItem('blogContent', blogContent);
+        function saveBlogPost() {
+            const blogPost = {
+                username: usernameInput.value,
+                email: emailInput.value,
+                blogContent: blogContentInput.value,
+            }
+            localStorage.setItem('blogPost', JSON.stringify(blogPost));
+        }
         
+        // localStorage.setItem('username', username);
+        // localStorage.setItem('email', email);
+        // localStorage.setItem('blogContent', blogContent);
         location.assign("blog.html");
     }
 })
