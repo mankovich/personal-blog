@@ -1,13 +1,11 @@
-const usernameInput = document.querySelector("#username");
-const emailInput = document.querySelector("#email");
-const blogContentInput = document.querySelector("#blog-content");
-const msgDiv = document.querySelector("#msg");
-const submitButton = document.querySelector("#submit-button");
+const usernameInput = document.querySelector('#username');
+const emailInput = document.querySelector('#email');
+const blogContentInput = document.querySelector('#blog-content');
+const msgDiv = document.querySelector('#msg');
+const submitButton = document.querySelector('#submit-button');
 const container = document.querySelector('.container');
 const themeSwitch = document.querySelector('#theme-switch');
 
-
-// TODO: Is querySelector correct? Or should it be getElementById????
 
 //Listening for click event on the submit button--when this occurs, the text in the input forms will be logged to local storage (assuming there is text in all three boxes; if any of them are blank, a message will alert them). The user is also then redirected to the blog webpage to view this blog post and presumably other past posts.
 
@@ -46,10 +44,12 @@ themeSwitch.addEventListener('click', function() {
     if (mode === 'light') {
         mode = 'dark';
         container.setAttribute('class', 'dark');
+        localStorage.setItem('colorTheme', 'dark');
     }
     else {
         mode = 'light';
         container.setAttribute('class', 'light');
+        localStorage.setItem('colorTheme', 'light')
     }
 });
 

@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/style/reset.css" /> -->
-    <link rel="stylesheet" type="text/css" href="./assets/style/style.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/style/blog.css" />
+    <title>My Blog Posts</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/style/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/style/blog.css" />
 </head>
-<body>
-    <header>
-        <!-- <div class="title-div">  -->
-        <h1>My First Blog</h1>
-        <!-- </div> -->
-        <div class="header-buttons-div">       
-            <button class="back-button"><span id="back-arrow">&#11104 </span> Back</button>
-            <div class="light-button">
-                <img src="./assets/images/Sun-Emoji-30x30.png" alt="generic 'light-on' emoji representing button to switch between light and dark mode display styling"/>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="posts-container">
 
-        </div>
-    </main>
-    
-    <footer>
-        <p>
-            &copy; 2024. Mankovich, a person. All rights reserved.
-        </p>
-        <ul>
-            <li id="footer-portfolio">Portfolio: </li>
-                <!-- <a class="portfolio-link" href="https://mankovich.github.io/portfolio">mankovich</a> -->  
-            <li id="footer-blog">Blog: </li>
-            <li id="footer-email">Email: </li>
-        </ul>
-    </footer>
+<body>
+    <div class = "container light">
+        <header>
+            <h1>My First Blog</h1>
+            <div class="header-buttons-div">       
+                <button id="back-button"><span id="back-arrow">&#11104 </span> Back</button>
+                <div id="theme-switch">
+                    <img src="./assets/images/Sun-Emoji-30x30.png" alt="generic 'light-on' emoji representing button to switch between light and dark mode display styling"/>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="posts-container">
+                
+            </div>
+        </main>
+        
+        <footer>
+            <p>
+                &copy; 2024. Mankovich, a person. All rights reserved.
+            </p>
+            <ul>
+                <li id="footer-portfolio">Portfolio: 
+                    <a href="https://mankovich.github.io/portfolio" target="_blank" id="portfolio-link">"Click to check out my portfolio!"</a>
+                </li>
+                <li id="footer-blog">Blog: </li>
+                <li id="footer-email">Email: 
+                    <a href="mailto:me@emaildomain.com" id="email-link"> me@emaildomain.com</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
     <script src="./assets/js/blog.js"></script>
 </body>
 </html>
