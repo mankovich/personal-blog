@@ -1,19 +1,37 @@
-/* Universal Selector */
-* {
-    --primary: black;
-    --secondary: white;
-    --tertiary: white;
+/* Element Selectors */
+.light{
+    --primary: rgb(10, 10, 10);
+    --secondary: rgb(245, 245, 245);
+    --tertiary: rgb(245, 245, 245);
     --circle1: rgb(206, 126, 69);
     --circle2: rgb(221, 162, 51);
     --circle3: rgb(240, 240, 114);
+    --shading1: rgb(0, 0, 226);
+    --shading2: rgb(0, 0, 116);
 }
 
-/* Element Selectors */
+.dark {
+    --primary: rgb(245, 245, 245);
+    --secondary: rgb(18, 18, 18);
+    --tertiary: rgb(38, 38, 38);
+    --circle1: rgb(68, 91, 219);
+    --circle2: rgb(53, 35, 218);
+    --circle3: rgb(47, 4, 117);
+    --shading1: rgb(233, 140, 0);
+    --shading2: rgb(255, 208, 0);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    color: var(--primary);
-    /* background-color: var(--secondary); */
+    background-color: var(--secondary);
 }
 
 header {
@@ -31,11 +49,17 @@ main {
 
 h1 {
     font-size: 60px;
-    font-weight:700;
-    color: var(--secondary);
-    text-shadow: 1px 1px 2px var(--primary), 0 0 32px rgb(0, 0, 226), 0 0 8px rgb(0, 0, 116);
-    /* 2px 2px 4px var(--primary); */
+    font-weight:600;
+    color: white;
+    text-shadow: 1px 1px 2px var(--primary), 0 0 32px var(--shading1), 0 0 8px var(--shading2);
     text-align: center;   
+}
+
+h2 {
+    font-size: 140%; 
+    line-height: 150px;
+    text-align: center;
+    color: var(--primary)
 }
 
 h3 {
@@ -44,27 +68,29 @@ h3 {
     margin-top: 15px;
     padding-bottom: 15px;
     font-weight: normal;
+    color: var(--primary);
 }
 
 footer {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* height: 40px; */
     border-top: 10px double var(--primary);
     background-color: var(--secondary);
+    
 }
 
-
-/* Class Selectors */
-.theme-switcher {
+#theme-switcher {
     padding: 10px;
     margin-right: 10px;
     margin-bottom: -5px;
+    cursor: pointer;
+}
+
+.container {
+    /* TODO: I don't know wth to do with this  */
 }
 
 .main-div {
     display: flex;
+    background-color: var(--tertiary);
 }
 
 .title-div {
@@ -72,8 +98,8 @@ footer {
 }
 
 .title-div, .form-div {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     display: flex;
     flex: 1 0 50%;
     align-items: center;
@@ -81,23 +107,35 @@ footer {
 }
 
 .title-circle {
-    width: 450px;
-    height: 450px;
-    line-height: 450px;
+    width: 400px;
+    height: 400px;
+    line-height: 400px;
     border-radius: 50%;
-    background-color: orange; /* For browsers that don't support gradients */
+    background-color: var(--circle1); /* For browsers that don't support gradients */
     background-image: repeating-radial-gradient(circle, var(--circle1), var(--circle2)12%, var(--circle3) 25%, var(--circle2) 38%, var(--circle1) 50%);
 }
 
+
+
 /* media query moving the form below the title circle for smaller screens */
 @media screen and (max-width: 992px) {
-    .container {
+    .container, .main-div {
         flex-direction: column;
-
+        align-items: center;
     }
 
     .title-div {
         border-right: none;
-        border-bottom: 10px double var(--primary);
+    }
+
+    .form-div {
+        border-top: 10px double var(--primary);
+    }
+
+    .title-div, .form-div {
+        flex: 1 0 100%;
+        width: 100%;
     }
 }
+
+

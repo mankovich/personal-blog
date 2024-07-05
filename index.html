@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <div class="container light">
+    <div class = "container light">
+                    <!-- I'm not sure why the class 'light' is assigned... -->
         <header>
-            <div class = "landing-page-header">
-                <div class="theme-switcher">
+            <div class="landing-page-header">
+                <div id="theme-switcher">
                     <img src="./assets/images/Sun-Emoji-30x30.png" alt="generic 'light-on' emoji representing button to switch between light and dark mode display styling"/>
                 </div>
             </div>
@@ -31,21 +32,24 @@
                 <div class="form-div">
                     <form>
                         <h2>What would you like to memorialize in this web log?</h2>
-                        <p>
-                            <label for="username">Username:</label>
-                            <input class="text-input" id="username" type="text"/>
-                        </p>
-                        <p>
-                            <label for="email">Email:</label>
-                            <input class="text-input" id="email" type="text"/>
-                        </p>
-                        <p>
-                            <label for="post-content">Content:</label>
-                            <input class="text-input" id="post-content" type="text"/>
-                        </p>
-                        <p>
+                        <div class="form-wrapper">
+                            <p>
+                                <label for="username">Username:</label>
+                                <input class="text-input" id="username" type="text"/>
+                            </p>
+                            <p>
+                                <label for="email">Email:</label>
+                                <input class="text-input" id="email" type="text"/>
+                            </p>
+                            <p>
+                                <label for="post-content">Content:</label>
+                                <input class="text-input" id="post-content" type="text"/>
+                            </p>
+                            <div class="error-message-space">
+                                <!-- TODO: does something go in here? -->
+                            </div>
                             <button id="submit-button">Submit</button>
-                        </p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -53,9 +57,9 @@
         <footer>
             <h3>&copy; 2024. Mankovich, a person. All rights reserved.</h3>
         </footer>
-        <script src="./assets/js/logic.js"></script>
-        <script src="./assets/js/form.js"></script>
     </div>
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
 </body>
 </html>
 

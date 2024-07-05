@@ -24,4 +24,21 @@
 //     border-color: #8ac4ff;
 //   }
 
-// Access 
+// Accessing HTML theme toggle element
+const themeSwitcher = document.querySelector('#theme-switcher');
+const container = document.querySelector('.container')
+
+// Setting default mode to light
+let mode = 'light'
+
+// Setting click listener for click event on theme-toggle switch
+themeSwitcher.addEventListener('click', function() {
+    if (mode === 'light') {
+        mode = 'dark';
+        container.setAttribute('class', 'dark');
+    }
+    else {
+        mode = 'light';
+        container.setAttribute('class', 'light');
+    }
+});
