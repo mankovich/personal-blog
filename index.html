@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog Landing Page</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style/reset.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/style/reset.css" /> -->
     <link rel="stylesheet" type="text/css" href="./assets/style/style.css" />
     <link rel="stylesheet" type="text/css" href="./assets/style/form.css" />
 </head>
 
 <body>
     <div class = "container light">
-                    <!-- I'm not sure why the class 'light' is assigned... -->
         <header>
             <div class="landing-page-header">
-                <div id="theme-switcher">
+                <div id="theme-switch">
                     <img src="./assets/images/Sun-Emoji-30x30.png" alt="generic 'light-on' emoji representing button to switch between light and dark mode display styling"/>
                 </div>
             </div>
@@ -31,21 +30,21 @@
                 </div>
                 <div class="form-div">
                     <form>
-                        <h2>What would you like to memorialize in this web log?</h2>
+                        <h2>What would you like to post to the blog?</h2>
                         <div class="form-wrapper">
                             <p>
                                 <label for="username">Username:</label>
-                                <input class="text-input" id="username" type="text"/>
+                                <input class="text-input" id="username" type="text" autocomplete="off"/>
                             </p>
                             <p>
                                 <label for="email">Email:</label>
-                                <input class="text-input" id="email" type="text"/>
+                                <input class="text-input" id="email" type="text" autocomplete="off"/>
                             </p>
                             <p>
                                 <label for="blog-content">Content:</label>
-                                <input class="text-input" id="blog-content" type="text"/>
+                                <input class="text-input" id="blog-content" type="text" autocomplete="off"/>
                             </p>
-                            <div id="error-msg"></div>
+                            <div id="msg"></div>
                             <button id="submit-button">Submit</button>
                         </div>
                     </form>
