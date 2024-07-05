@@ -1,12 +1,3 @@
-/* .light{
-    
-}
-
-.dark {
-    
-} */
-
-/* Element Selectors */
 form {
     display: flex; 
     flex-direction: column;
@@ -45,7 +36,7 @@ label {
     text-shadow: 1px 1px 1px var(--secondary);
 }
 
-button {
+#submit-button {
     padding: 4px;
     color: rgb(245, 245, 245);
     background-color: rgb(10, 10, 10);
@@ -56,7 +47,11 @@ button {
     cursor: pointer;
 }
 
-/* Class Selector */
+#submit-button:active {
+    font-size: 180%;
+    box-shadow: 0 0 10px #000 inset;
+}
+
 .form-wrapper {
     width: 100%;
     padding-left: 10%;
@@ -86,11 +81,8 @@ button {
     background-color: white;
     color: black;
     font-size: 13px;
-    
-
 }
 
-/* ID Selector */
 #post-content {
     height: 175px;
 }
