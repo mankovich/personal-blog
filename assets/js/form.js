@@ -32,3 +32,8 @@ submitButton.addEventListener('click', function(event) {
         location.assign("blog.html");
     }
 })
+
+function init() {
+    
+}
+init();
