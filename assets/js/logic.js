@@ -1,48 +1,6 @@
-const usernameInput = document.querySelector('#username');
-const emailInput = document.querySelector('#email');
-const blogContentInput = document.querySelector('#blog-content');
-const msgDiv = document.querySelector('#msg');
-const submitButton = document.querySelector('#submit-button');
+
 const container = document.querySelector('.container');
 const themeSwitch = document.querySelector('#theme-switch');
-
-
-//Listening for click event on the submit button--when this occurs, the text in the input forms will be logged to local storage (assuming there is text in all three boxes; if any of them are blank, a message will alert them). The user is also then redirected to the blog webpage to view this blog post and presumably other past posts.
-
-function displayMessage(message) {
-    msgDiv.textContent = message;
-    msgDiv.setAttribute('class', 'error');
-}
-
-submitButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    // const username = usernameInput.value;
-    // const email = emailInput.value;
-    // const blogContent = blogContentInput.value;
-    
-    if (usernameInput === "") {
-        displayMessage('**Username cannot be blank**');
-    } else if (emailInput === "") {
-        displayMessage('**Email cannot be blank**');
-    } else if (blogContentInput === "") {
-        displayMessage('**Content cannot be blank**');
-    } else {
-        function saveBlogPost() {
-            const blogPost = {
-                username: usernameInput.value,
-                email: emailInput.value,
-                blogContent: blogContentInput.value,
-            }
-            localStorage.setItem('blogPost', JSON.stringify(blogPost));
-        }
-        
-        // localStorage.setItem('username', username);
-        // localStorage.setItem('email', email);
-        // localStorage.setItem('blogContent', blogContent);
-        location.assign("blog.html");
-    }
-})
 
 // Setting default mode to light
 let mode = 'light'
@@ -60,7 +18,3 @@ themeSwitch.addEventListener('click', function() {
         localStorage.setItem('colorTheme', 'light')
     }
 });
-
-
-// TODO: save current theme mode in local storage 
-// if decide to do this, good help at https://codyhouse.co/blog/post/store-theme-color-preferences-with-localstorage ... I also saved her code and comments on the sticky note
