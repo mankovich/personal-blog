@@ -1,6 +1,6 @@
 
 const container = document.querySelector('.container');
-const themeSwitch = document.querySelector('#theme-switch');
+const themeSwitch = document.getElementById('#theme-switch');
 
 // Setting default mode to light
 let mode = 'light'
