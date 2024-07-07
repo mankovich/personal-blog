@@ -12,7 +12,7 @@ In the upper right-hand corner of both pages, there is a light button that, when
 
 ## Screenshots of Deployed Application
 
-![Screenshot of landing page displayed with light theme.](./README-images\landing-page-light_screenshot.jpg)
+![Screenshot of landing page displayed with light theme.](./README-images/landing-page-light_screenshot.jpg)
 
 ![Screenshot of blog page displayed with light theme.](./README-images/blog-page-light_screenshot.jpg)
 
