@@ -39,7 +39,7 @@ footer li {
     cursor: pointer;
 }
 
-#posts-container {
+#blog-posts-container {
     min-height: 500px;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,7 @@ footer li {
     align-items: center;
     padding-left: 10px;
 }
+
 
 #back-arrow {
     font-size: 18px;

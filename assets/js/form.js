@@ -23,15 +23,21 @@ submitButton.addEventListener('click', function(event) {
     } else if (blogContent === "") {
         displayMessage('**Content cannot be blank**');
     } else {
-        const newBlogPost = {
+        const blogPostData = {
             username: username,
             title: title,
             blogContent: blogContent,
         }
-        const storedPosts = JSON.parse(localStorage.getItem('blogPost'));
-        const blogPost = storedPosts.push(newBlogPost);
-        localStorage.setItem('blogPost', JSON.stringify(blogPost));
+        saveBlogPostData(blogPostData)
        
         location.assign("blog.html");
     }
 })
+
+function saveBlogPostData(blogPostData) {
+    const storedBlogPostData = JSON.parse(localStorage.getItem('blogPostData')) || [];
+
+    storedBlogPostData.push(blogPostData);
+
+    localStorage.setItem('blogPostData', JSON.stringify(storedBlogPostData));
+}
