@@ -12,9 +12,9 @@ function displayMessage(message) {
 submitButton.addEventListener('click', function(event) {
     event.preventDefault();
     
-    const username = usernameInput.value;
-    const title = titleInput.value;
-    const blogContent = blogContentInput.value;
+    const username = usernameInput.value.trim();
+    const title = titleInput.value.trim();
+    const blogContent = blogContentInput.value.trim();
     
     if (username === "") {
         displayMessage('**Username cannot be blank**');
@@ -23,17 +23,15 @@ submitButton.addEventListener('click', function(event) {
     } else if (blogContent === "") {
         displayMessage('**Content cannot be blank**');
     } else {
-        const blogPost = {
+        const newBlogPost = {
             username: username,
             title: title,
             blogContent: blogContent,
         }
-        localStorage.setItem('blogPost', JSON.stringify(blogPost))
+        const storedPosts = JSON.parse(localStorage.getItem('blogPost'));
+        const blogPost = storedPosts.push(newBlogPost);
+        localStorage.setItem('blogPost', JSON.stringify(blogPost));
+       
         location.assign("blog.html");
     }
 })
-
-function init() {
-    
-}
-init();
